@@ -10,7 +10,6 @@ The project includes:
 - Input and output data files (`DATA_h.txt`, `CRC_OUT_h.txt`)  
 - Simulation script for automation (`Simulate.do`)  
 - Report with results (`LFSR_CRC_RESULTS.pdf`)  
-- Assignment specification (`Assignment_V_5.0.pdf`)  
 
 ---
 
@@ -33,7 +32,6 @@ Verilog5_0_Abdelhameed_Mahmoud/
 │── DATA_h.txt              # Input data for CRC calculation
 │── CRC_OUT_h.txt           # Output results from simulation
 │── LFSR_CRC_RESULTS.pdf    # Report with simulation waveforms and analysis
-│── Assignment_V_5.0.pdf    # Full specification and requirements
 ```
 
 ---

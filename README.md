@@ -53,9 +53,8 @@ Verilog5_0_Abdelhameed_Mahmoud/
 
 ---
 
-## 📑 Assignment Specifications  
-
-Based on **Assignment_V_5.0.pdf**:  
+## 📑 System Specifications  
+  
 - **Seed Initialization:** All registers are initialized to `8'hD8` using asynchronous active-low reset.  
 - **Data Length:** Supports variable input length (1 to 4 bytes, typically 1 byte).  
 - **Active Signal:** `ACTIVE=1` during data transmission.  

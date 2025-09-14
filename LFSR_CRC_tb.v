@@ -5,8 +5,7 @@
 // Author      : Abdelhameed Mahmoud
 //*****************************************************************************
 
-`timescale 1us / 1us  
-
+`timescale 1ns / 1ns 
 //*****************************************************************************
 // Module Declaration
 //*****************************************************************************
@@ -18,7 +17,7 @@ module LFSR_CRC_tb;
 parameter DATA_IN_WIDTH = 8;
 parameter CRC_OUT_WIDTH = 8;
 parameter TEST_CASES    = 10;
-parameter CLOCK_PERIOD  = 20;
+parameter CLOCK_PERIOD = 100;
 
 //*****************************************************************************
 // Memory Arrays

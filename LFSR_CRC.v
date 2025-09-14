@@ -26,7 +26,7 @@ module LFSR_CRC #(
     //=========================================================================
     reg [N-1:0] LFSR;
     reg [3:0]   Enable;                      // Bit counter for output
-    wire        Feed_Back;
+    wire       Feed_Back;
     integer    i;
 
     assign Feed_Back = LFSR[0] ^ Data;
@@ -40,7 +40,7 @@ module LFSR_CRC #(
         if (!RST) begin
             LFSR   <= 8'hD8;                 // Initial seed value
             Valid  <= 1'b0;
-            Enable <= N;
+            Enable <= 4'd0;
             CRC    <= 1'b0;
         end
         else begin
@@ -54,20 +54,15 @@ module LFSR_CRC #(
                         LFSR[i] <= LFSR[i+1];
                 end
                 LFSR[N-1] <= Feed_Back;
-                Enable    <= 0;              // Reset counter to start output phase later
             end
+
             else if (Enable < N) begin
                 CRC    <= LFSR[0];
                 LFSR   <= LFSR >> 1;
                 Enable <= Enable + 1;
                 Valid  <= 1'b1;
             end
-			else begin
-                // Fix: Reset counter and Valid after operation finishes
-                Enable <= N;
-                Valid  <= 1'b0;
-			end
+        end
     end
 
 endmodule
-
